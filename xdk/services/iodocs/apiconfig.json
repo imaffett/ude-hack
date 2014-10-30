@@ -1,0 +1,8 @@
+{
+  "bestbuy": {
+    "name": "Best Buy API",
+    "description": "A great API",
+    "dashboardUrl": "https://remix.mashery.com/apps/mykeys",
+    "auth": "v9xyg8sq7anwj8a4gac7wajt"  
+  }
+}

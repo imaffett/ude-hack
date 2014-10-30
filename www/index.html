@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Best Buy API Demo</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/af.ui.min.css">
+</head>
+<body>
+<div id="afui">
+
+  <div class="content">
+
+    <div class="panel" id="main" title="Product List" selected="true" data-footer="none">
+      <span>
+        <input type="text" id="manval" placeholder="Manufacturer" value="Intel" style="margin:10px;width:calc( 100% - 100px)">
+        <a class="button" id="searcher" style="padding-top:10px">Search</a>
+      </span>
+      <ul class="list" id="plist" >
+
+      </ul>
+    </div>
+
+    <div class="panel" id="info" title="Product Info" data-footer="none">
+      <div id="ptitle" style="font-size:30px;font-weight:bold;margin-bottom:10px;"></div>
+      <div id="pcost" style="font-size:20px;margin-bottom:10px;"></div>
+      <div id="psku" style="font-size:12px;">SKU:</div>
+      <hr>
+      <h1 style="border-bottom:1px solid #ccc;margin-bottom:4px">Reviews</h1>
+
+      <div id="reviews">No Reviews</div>
+    </div>
+
+</body>
+      <script src="intelxdk.js"></script>
+    <script src="cordova.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/af.ui.jquery.min.js"></script>
+    <script src="js/app.js"></script>
+
+
+  <script src="xhr.js"></script>
+  <script src="xdk/services/service-credentials.js"></script>
+  <script src="xdk/services/service-methods.js"></script>
+
+
+</html>

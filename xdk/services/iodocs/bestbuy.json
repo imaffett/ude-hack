@@ -1,0 +1,49 @@
+{
+"endpoints": [
+  {
+    "name": "Product Search",
+    "dashboardUrl": "https://developer.bestbuy.com/documentation#show-show",
+    "methods": [
+      {
+        "MethodName": "search",
+        "Synopsis": "Searches based off manufacturer",
+        "parameters": [
+          {
+            "Name": "manufacturer",
+            "Required": "Y",
+            "Default": "",
+            "Type": "string",
+            "Description": "Manufacturer to search from."
+          }
+        ]
+      },
+      {
+        "MethodName": "productInfo",
+        "Synopsis": "Get Product Info",
+        "parameters": [
+          {
+            "Name": "sku",
+            "Required": "Y",
+            "Default": "",
+            "Type": "string",
+            "Description": "SKU to get info for."
+          }
+        ]
+      },
+      {
+        "MethodName": "reviews",
+        "Synopsis": "Get Product reviews",
+        "parameters": [
+          {
+            "Name": "sku",
+            "Required": "Y",
+            "Default": "",
+            "Type": "string",
+            "Description": "SKU to get reviews for."
+          }
+        ]
+      }
+    ]
+  }
+]
+}
