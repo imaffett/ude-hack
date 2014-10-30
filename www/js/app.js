@@ -10,8 +10,10 @@ $.ui.ready(function(){
 
 
 function doSearch(man){
-    intel.xdk.services.bestbuysearch({"manufacturer":man})
+  $.ui.showMask("Searching...");
+  intel.xdk.services.bestbuysearch({"manufacturer":man})
   .then(function (response) {
+    $.ui.hideMask();
     var data=response.products;
     var html="";
 
@@ -21,12 +23,22 @@ function doSearch(man){
     $("#plist").html(html);
 
   });
+  setTimeout(function(){
+        $.ui.hideMask();
+  },5000);
 }
 
 $("#searcher").on("click",function(){
-
     doSearch($("#manval").val());
 });
+
+$("#manval").on("keyup",function(e){
+  if(e.which===13)
+  {
+    $("#manval").blur();
+    $("#searcher").trigger("click");
+  }
+})
 
 $("#info").on("loadpanel",function(e){
     $.ui.showMask("Loading...");
@@ -63,4 +75,3 @@ $("#info").on("loadpanel",function(e){
     },3000);
      $.ui.scrollingDivs['info'].scrollToTop();
 });
-alert("parsed or something");
